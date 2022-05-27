@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Data Type, Pass Value & Reference</title>
+</head>
+<body>
+    <script>
+
+        /* Pass Value by Reference */
+        var a = 1;
+        var b = 2;
+        var c = a + b;
+        console.log(c);
+
+        /* Type Data Primitive */
+        var nama = 'Andri Budi Santoso'; // String
+        var umur = 25; // Integer
+        var sudahMenikah = true; // Boolean
+        var anak = ['anak 1','anak 2']; // Array
+
+        console.log(nama);
+        console.log(umur);
+        console.log(sudahMenikah);
+        console.log(anak);
+        
+        const person = {
+            firstName : 'Andri',
+            lastName : 'Budi Santoso'
+        }
+        var anak = ['anak 1', 'anak 2']; // Array
+
+        console.log(typeof person);
+        console.log(anak);
+
+        /* Anonymous Functions */
+        const functionExample=(name)=> {
+            return 'Helo World ' + name;
+        }
+
+        console.log(typeof functionExample);
+        
+        var greeting = functionExample('Andri Budi Santoso');
+        console.log(greeting);
+
+        /* Calculator */
+        const functionCalculator=(varA, varB, varC)=> {
+            return varA + varB + varC;
+        }
+
+        var calculator = functionCalculator(1, 2, 3);
+        console.log('Hasil = ' + calculator);
+
+        function kalkulator(input1, operator, input2) {
+            if (operator == '+') {
+                return input1 + input2;
+            } else if (operator == '-') {
+                return input1 - input2;
+            } else {
+                return undefined;
+            }
+        }
+
+        var penjumlahan = kalkulator(1, '+' , 2);
+        console.log('Hasilnya Adalah = ' + penjumlahan);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Event</title>
+</head>
+<body onload="greeting();">
+    <input type="text" name="nama" id="nama" onkeyup="ketik()">
+
+    <br>
+    <p>
+        Nama Saya Adalah : <span class="nama"></span>
+    </p>
+    
+    <select name="negara" onchange="pilihNegara()">
+        <option value="ID">Indonesia</option>
+        <option value="MY">Malaysia</option>
+        <option value="US">United States</option>
+    </select>
+
+    <button onclick="klikSaya()">Klik Saya</button>
+
+    <img src="../images/img.png" id="gambarKu" width="200" onmousehover="gantiWarna()">
+
+    <script>
+        /* IFE */
+        (function(){
+            console.log('immediately invoke function');
+        })();
+
+        /* Normal Functions */
+        hello = function() {
+            console.log('Fungsi Biasa');
+        }
+
+        /* Arrow Functions */
+        hello2 = ()=> {
+            console.log('Fungsi Arrow');
+        }
+
+        hello();
+        hello2();
+
+        function greeting(params) {
+            alert('Hallo Guys');
+        }
+
+        function gantiWarna(params) {
+            var gambar = document.getElementById('gambarKu');
+            gambar.style.visibility = 'hidden';
+        }
+
+        function klikSaya() {
+            alert('Anda Melakukan Klik Button');
+        }
+
+        function pilihNegara() {
+            alert('Anda Memilih Negara');
+        }
+
+        function ketik() {
+            var nama = document.getElementById("#nama")
+            console.log('Anda Sedang Typing : ' + nama);
+        }
+    </script>
+</body>
+</html>
