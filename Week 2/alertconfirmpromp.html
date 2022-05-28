@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert, Confirm, Promp</title>
+</head>
+<body>
+    <div id="nama"></div>
+    <script>
+
+        /* Alert Example */
+        alert('Selamat Anda Berhasil');
+
+        /* Confirm Example */
+        var yakin = confirm('Apakah Anda Yakin?');
+        if (yakin) {
+            alert('Ya Anda Yakin');
+        } else {
+            alert('Tidak, Anda Tidak Yakin');
+        }
+
+        /* Prompt Example */
+        var nama = prompt('Siapa Nama Anda');
+        document.getElementById('nama').innerHTML = nama;
+    </script>
+</body>
+</html>
